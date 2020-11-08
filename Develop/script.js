@@ -3,15 +3,15 @@ var currentDate = moment().format('dddd, MMMM Do')
 $('#currentDay').text(currentDate)
 
 var currentHour = parseInt(moment().format('HH'))
-var officeHour = $('.office-hour')
+var officeHour = $('.office-hour').attr('data-hour')
 
 for (i = 0; i < officeHour.length; i++) {
-  if (parseInt($(officeHour[i]).attr('data-hour')) == currentHour) {
-    var inputField = $(officeHour[i]).siblings().find('.event-input')
+  var inputField = $(officeHour[i]).siblings().find('.event-input')
+  var officeHour = $('.office-hour').attr('data-hour')
+  if (parseInt($(officeHour[i])) == currentHour) {
     inputField.css('background-color', 'red')
     inputField.attr('placeholder', 'Current Hour')
-  } else if (parseInt($(officeHour[i]).attr('data-hour')) > currentHour) {
-    var inputField = $(officeHour[i]).siblings().find('.event-input')
+  } else if (parseInt($(officeHour[i])) > currentHour) {
     inputField.css('background-color', 'green')
   }
 }
@@ -24,7 +24,6 @@ $('.save-button').click(function () {
 
 $(document).ready(function () {
   $('.event-input').each(function () {
-    console.log($(this).parent().siblings('.office-hour').attr('data-hour'))
     $(this).val(
       localStorage.getItem(
         $(this).parent().siblings('.office-hour').attr('data-hour')
