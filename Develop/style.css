@@ -70,22 +70,20 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-#event-input {
+.event-input {
   width: 100%;
   border: none;
   background-color: lightgrey;
   padding: 0.5em;
 }
-
-#time {
+.current-hour {
   text-align: right;
   font-size: 2em;
   border-right: 1px solid lightgrey;
 }
-
-#save {
+.save {
   padding-left: 0px;
 }
-#event {
+.event {
   padding-right: 0px;
 }

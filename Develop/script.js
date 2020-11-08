@@ -3,3 +3,4 @@ var currentDate = moment().format('dddd, MMMM Do')
 $('#currentDay').text(currentDate)
 
 console.log(moment().format('HH'))
+console.log($('.current-hour').attr('data-hour'))
