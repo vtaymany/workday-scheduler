@@ -6,7 +6,7 @@ $('#currentDay').text(currentDate)
 var currentHour = parseInt(moment().format('HH'))
 var officeHour = $('.office-hour')
 
-//
+//Changes colors of the boxes depending on the time of day
 for (i = 0; i < officeHour.length; i++) {
   if (parseInt($(officeHour[i]).attr('data-hour')) == currentHour) {
     var inputField = $(officeHour[i]).siblings().find('.event-input')
@@ -18,6 +18,7 @@ for (i = 0; i < officeHour.length; i++) {
   }
 }
 
+//Saves input values in the users local storage
 $('.save-button').click(function () {
   var populatedField = $(this).parent().siblings().find('.event-input').val()
   var thisOfficeHour = $(this)
@@ -27,6 +28,7 @@ $('.save-button').click(function () {
   localStorage.setItem(thisOfficeHour, populatedField)
 })
 
+//Retrieves stored values from the users local storage
 $(document).ready(function () {
   $('.event-input').each(function () {
     $(this).val(
