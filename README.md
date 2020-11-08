@@ -26,7 +26,7 @@
 
 ## Installation
 
-- No installation is required. The application may be viewed [here]()
+- No installation is required. The application may be viewed [here](https://vtaymany.github.io/workday-scheduler/)
 
 ## Roadmap
 
