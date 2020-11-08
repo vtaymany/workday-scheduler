@@ -43,5 +43,9 @@ Demo showing time blocks color-coded based on the current time
 ![Time by color](./Assets/time-by-color.png 'Time by color')
 
 ## Credits
+- [Font Awesome - Save icon](https://fontawesome.com/)
+- [w3schools](https://www.w3schools.com/)
+
+## Credits
 
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
