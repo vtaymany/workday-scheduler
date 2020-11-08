@@ -37,7 +37,7 @@
 ## Screenshots
 
 Demo showing persistent values
-![Saved in local storage](./Assets/saved-in-local-storage.png 'Saved in local storage')
+![Saved in local storage](./Assets/persistent-data.gif 'Saved in local storage')
 Demo showing time blocks color-coded based on the current time
 ![Time by color](./Assets/time-by-color.png 'Time by color')
 
