@@ -19,10 +19,16 @@ for (i = 0; i < officeHour.length; i++) {
 $('.save-button').click(function () {
   var populatedField = $(this).parent().siblings().find('.event-input').val()
   var officeHour = $(this).parent().siblings('.office-hour').attr('data-hour')
-  console.log(officeHour)
   localStorage.setItem(officeHour, populatedField)
 })
 
-// $(document).ready(function () {
-//   console.log('ready!')
-// })
+$(document).ready(function () {
+  $('.event-input').each(function () {
+    console.log($(this).parent().siblings('.office-hour').attr('data-hour'))
+    $(this).val(
+      localStorage.getItem(
+        $(this).parent().siblings('.office-hour').attr('data-hour')
+      )
+    )
+  })
+})
